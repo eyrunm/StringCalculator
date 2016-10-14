@@ -9,6 +9,10 @@ public class Calculator {
 		else if(text.contains(",")){
 			return sum(splitNumbers(text));
 		}
+		else if ( toInt(text) < 0 )
+		{
+			throw IllegalArgumentException("Negatives not allowed!");
+		}
 		else
 			return 1;
 	}
