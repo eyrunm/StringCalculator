@@ -1,4 +1,5 @@
 package is.ru.stringcalculator;
+import java.lang.IllegalArgumentException;
 
 public class Calculator {
 
@@ -6,12 +7,12 @@ public class Calculator {
 		if(text.equals("")){
 			return 0;
 		}
-		else if(text.contains(",")){
+		if(text.contains(",")){
 			return sum(splitNumbers(text));
 		}
-		else if ( toInt(text) < 0 )
+		if ( text.contains("-") )
 		{
-			throw IllegalArgumentException("Negatives not allowed!");
+			throw new IllegalArgumentException("Negatives not allowed!");
 		}
 		else
 			return 1;
