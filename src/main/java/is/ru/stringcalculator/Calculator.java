@@ -14,6 +14,9 @@ public class Calculator {
 		{
 			throw new IllegalArgumentException("Negatives not allowed!");
 		}
+		if(text.contains("\n")){
+			return sum(splitNumbersNewLine(text));
+		}
 		else
 			return 1;
 	}
@@ -24,6 +27,9 @@ public class Calculator {
 
 	private static String[] splitNumbers(String numbers){
 	    return numbers.split(",");
+	}
+	private static String[] splitNumbersNewLine(String numbers){
+	    return numbers.split("\n");
 	}
       
     private static int sum(String[] numbers){

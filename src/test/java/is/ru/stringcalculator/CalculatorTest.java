@@ -44,4 +44,9 @@ public class CalculatorTest {
     	assertEquals(2, Calculator.add("-100,2"));
     }
 
+    @Test
+	public void testNewLine() {
+		assertEquals(3, Calculator.add("1,\n2"));
+	}	
+
 }
