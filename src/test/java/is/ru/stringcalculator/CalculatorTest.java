@@ -47,6 +47,11 @@ public class CalculatorTest {
     @Test
 	public void testNewLine() {
 		assertEquals(3, Calculator.add("1,\n2"));
-	}	
+	}
+
+	@Test
+	public void testDelimeter() {
+		assertEquals(4, Calculator.add("1;3"));
+	}		
 
 }
